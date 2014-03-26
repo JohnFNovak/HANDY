@@ -1,0 +1,15 @@
+xc 1e2     initial commoner popultaion
+xe 10      initial elite population
+y  100     inital amount of nature
+w  0       initial amount of wealth
+am 1e-2    minimum death rate
+aM 7e-2    Maximal death rate
+bc 3e-2    commoner birth rate
+be 3e-2    elite birth rate
+g  1e-2    nature regeneration factor
+l  100     nature's capactiy
+s  5e-4    subsistence salary (consumption)
+d  4.33e-5 nature depletion factor
+k  0       difference in consumtion factor
+r  5e-3    minimum required consumption
+t  1000    run time
