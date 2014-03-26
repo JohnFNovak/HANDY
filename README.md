@@ -16,7 +16,7 @@ numpy<br />
 matplotlib (optional) <br />
 
 ####To use:<br />
-  python Run_HANDY.py <parameter text file>
+  python Run_HANDY.py <parameter text file\>
 
 
 ####Parameter files
