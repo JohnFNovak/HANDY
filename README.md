@@ -12,7 +12,6 @@ john (period) franc (period) novak (at) gmail (dot) com <br />
 
 ####requires:<br />
 python<br />
-numpy<br />
 matplotlib (optional) <br />
 
 ####To use:<br />
