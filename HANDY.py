@@ -31,7 +31,6 @@ class Model():
 
     def set_params(self, xc='', xe='', y='', w='', am='', aM='', bc='', be='',
                    g='', l='', s='', d='', k='', r='', t=''):
-
         Mam, MaM, Mbc, Mbe, Mg, Ml, Ms, Md, Mk, Mr = self.parameters
         Mxc, Mxe, My, Mw = self.metrics
         Mt = self.runtime
@@ -73,7 +72,6 @@ class Model():
 
     def load_params(self, fname):
         """ Load model values from file"""
-
         data = {'t': 0}
         if os.path.isfile(fname):
             with open(fname, 'r') as f:
@@ -135,23 +133,15 @@ class Model():
         xc = xc + dxc
         if xc < 0:
             xc = 0
-        # if xc > 1e22:
-            # xc = 1e22
         xe = xe + dxe
         if xe < 0:
             xe = 0
-        # if xe > 1e22:
-            # xe = 1e22
         y = y + dy
         if y < 0:
             y = 0
-        # if y > 1e22:
-            # y = 1e22
         w = dw + w
         if w < 0:
             w = 0
-        # if w > 1e22:
-            # w = 1e22
         self.metrics = [xc, xe, y, w]
 
         return [xc, xe, y, w]

@@ -15,7 +15,6 @@ from HANDY import Model as HANDY
 
 def main():
     """ Main loop for code execution"""
-
     model = HANDY(fname=sys.argv[1])
     XC, XE, N, W = model.run_auto(norm=True)
 
