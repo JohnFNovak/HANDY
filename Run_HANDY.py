@@ -24,8 +24,9 @@ def main():
         plt.plot(range(len(N)), N, label="Nature", color='g')
         plt.plot(range(len(W)), W, label="Weatlth", color='k')
         plt.legend()
-        plt.savefig('.'.join(sys.argv[1].split('.')[:-1])+'.pdf')
-        os.system("open " + '.'.join(sys.argv[1].split('.')[:-1])+'.pdf')
+        plt.savefig('.'.join(fname.split('.')[:-1])+'.pdf')
+        plt.close()
+        os.system("open " + '.'.join(fname.split('.')[:-1])+'.pdf')
 
 
 if __name__ == '__main__':
