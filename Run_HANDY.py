@@ -16,6 +16,9 @@ from HANDY import Model as HANDY
 def main():
     """ Main loop for code execution"""
     for fname in sys.argv[1:]:
+        if not os.path.isfile(fname):
+            print "'"+fname+"'", "is not a file"
+            break
         model = HANDY(fname=fname)
         XC, XE, N, W = model.run_auto(norm=True)
 
