@@ -15,17 +15,23 @@ from HANDY import Model as HANDY
 
 def main():
     """ Main loop for code execution"""
-    model = HANDY(fname=sys.argv[1])
-    XC, XE, N, W = model.run_auto(norm=True)
+    for fname in sys.argv[1:]:
+        model = HANDY(fname=fname)
+        XC, XE, N, W = model.run_auto(norm=True)
 
-    plt.plot(range(len(XC)), XC, label="Commoner Population", color='b')
-    plt.plot(range(len(XE)), XE, label="Elite Population", color='r')
-    plt.plot(range(len(N)), N, label="Nature", color='g')
-    plt.plot(range(len(W)), W, label="Weatlth", color='k')
-    plt.legend()
-    plt.savefig('.'.join(sys.argv[1].split('.')[:-1])+'.pdf')
-    os.system("open " + '.'.join(sys.argv[1].split('.')[:-1])+'.pdf')
+        plt.plot(range(len(XC)), XC, label="Commoner Population", color='b')
+        plt.plot(range(len(XE)), XE, label="Elite Population", color='r')
+        plt.plot(range(len(N)), N, label="Nature", color='g')
+        plt.plot(range(len(W)), W, label="Weatlth", color='k')
+        plt.legend()
+        plt.savefig('.'.join(sys.argv[1].split('.')[:-1])+'.pdf')
+        os.system("open " + '.'.join(sys.argv[1].split('.')[:-1])+'.pdf')
 
 
 if __name__ == '__main__':
+    if len(sys.argv) == 1:
+        print "Provide a parameter file."
+        print "Ex: ./Run_HANDY.py HANDY_params_default.txt"
+        print "If multiple files are given, they will be run",
+        print "sequentially"
     main()
